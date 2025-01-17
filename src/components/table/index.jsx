@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { getDeepCopy } from "../../utils/helpers";
 import { Input } from "../input";
 import { TableContainer, Td } from "./style";
+
 export const Table = ({ sudokuArr, setSudokuArr, initialArr }) => {
   const deepCopy = getDeepCopy(sudokuArr)
 
