@@ -4,19 +4,18 @@ import { Input } from "../input";
 import { TableContainer, Td } from "./style";
 
 export const Table = ({ sudokuArr, setSudokuArr, initialArr }) => {
-  const deepCopy = getDeepCopy(sudokuArr)
+  const deepCopy = getDeepCopy(sudokuArr);
 
   const onInputChange = (e, row, col) => {
     let value = parseInt(e.target.value) || -1,
-      grid = deepCopy
+      grid = deepCopy;
 
     //Define o valor do input entre 1-9 e se for vasio é -1
-    if (value === -1 || value >= 1 && value <= 9) {
-      grid[row][col] = value
+    if (value === -1 || (value >= 1 && value <= 9)) {
+      grid[row][col] = value;
     }
-    setSudokuArr(grid)
-
-  }
+    setSudokuArr(grid);
+  };
   return (
     <TableContainer>
       <tbody>

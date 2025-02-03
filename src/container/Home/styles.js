@@ -1,47 +1,59 @@
 import styled from "styled-components";
 
-const backgroundColor = (key) => {
-  switch (key) {
-    case "Resolver":
-      return "orange";
-    case "Reiniciar":
-      return "aqua";
-    default:
-      return "tomato";
-  }
-};
-
 export const Container = styled.div`
-  background-color: #1e1e2f;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #ffffff;
+  gap: 20px;
   padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 `;
 
 export const ButtonContainer = styled.div`
-  margin-top: 20px;
+  display: flex;
+  gap: 10px;
 `;
-export const Button = styled.button`
-  /* background-color: tomato; */
-  background-color: ${({ children }) => backgroundColor(children)};
 
-  font-weight: bold;
+const ButtonBase = styled.button`
   padding: 12px 20px;
   border: none;
-  border-radius: 20px;
-  font-size: 14px;
-  margin: 0 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
   cursor: pointer;
-  transition: 1s;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    transform: scale(1.3);
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+`;
+
+export const CheckButton = styled(ButtonBase)`
+  background: #4caf50;
+
+  &:hover {
+    background: #45a049;
+  }
+`;
+
+export const SolveButton = styled(ButtonBase)`
+  background: #ff9800;
+
+  &:hover {
+    background: #e68900;
+  }
+`;
+
+export const ResetButton = styled(ButtonBase)`
+  background: #f44336;
+
+  &:hover {
+    background: #d32f2f;
   }
 `;

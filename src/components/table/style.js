@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TableContainer = styled.table`
   border-collapse: collapse;
   border: 3px solid bisque;
-  background-color: bisque;
+  background-color: #f29d35;
 
   .borderBottom {
     border-bottom: 3px solid black;
