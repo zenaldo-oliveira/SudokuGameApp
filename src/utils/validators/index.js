@@ -41,7 +41,7 @@ const checkValid = (grid, row, col, num) => {
   if (
     checkRow(grid, row, num) &&
     checkCol(grid, col, num) &&
-    checkBox(grid, col, row, num)
+    checkBox(grid, row, col, num)
   )
     return true;
 

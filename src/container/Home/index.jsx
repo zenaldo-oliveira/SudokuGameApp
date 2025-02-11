@@ -1,14 +1,15 @@
 import {
+  Container,
+  ButtonContainer,
   CheckButton,
   SolveButton,
   ResetButton,
-  Container,
-  ButtonContainer,
 } from "./styles";
+
+import { Table } from "../../components/Table";
 import { useState } from "react";
-import { Table } from "../../components/table";
 import { getDeepCopy } from "../../utils/helpers";
-import { solver, compareSudokus } from "../../utils/solver";
+import { solver, compareSudokus } from "../../utils/validators";
 
 // Estado inicial do Sudoku
 const initial = [
@@ -33,6 +34,7 @@ export const Home = () => {
 
     if (compare.isComplete) return alert("Parabéns! Você resolveu o Sudoku.");
     if (compare.isSolvable) return alert("Continue tentando!");
+
     return alert("Sudoku não foi resolvido. Tente novamente.");
   };
   //resolver o sudoku
@@ -53,7 +55,7 @@ export const Home = () => {
       <Table
         sudokuArr={sudokuArr}
         setSudokuArr={setSudokuArr}
-        initialArr={initial}
+        initalArr={initial}
       />
       <ButtonContainer>
         <CheckButton onClick={checkSudoku}>Verificar</CheckButton>
