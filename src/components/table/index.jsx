@@ -1,7 +1,7 @@
-import { getDeepCopy } from "../../utils/helpers";
-import { TableContainer, Td } from "./TableContainer.jsx";
-import { Input } from "../input";
 import PropTypes from "prop-types";
+import { getDeepCopy } from "../../utils/helpers";
+import { Input } from "../input";
+import { TableContainer, Td } from "./style";
 
 export const Table = ({ sudokuArr, setSudokuArr, initialArr }) => {
   // Garantindo que sudokuArr e initialArr são arrays 9x9 válidos
