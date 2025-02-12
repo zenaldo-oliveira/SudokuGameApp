@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --primary-color: #007bff;
     --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
-    --text-color: #333;
+    --background-color: #fa0808;
+    --text-color: #df0808;
     --font-family: "Inter", sans-serif;
   }
 
